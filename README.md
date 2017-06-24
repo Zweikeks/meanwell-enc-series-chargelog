@@ -1,7 +1,7 @@
 # meanwell-enc-series-chargelog
 Command line utility (Python) to program or monitor the Mean Well ENC-series of battery chargers.  
 No programmer needed. Direct connection to the serial port of the charger (see file header).  
-Programming of the charging curve (constant current, constant voltage, taper current, float voltage and temperature coefficient) is supported.  
+Programming of the charging curve, i.e. programming of constant current, constant voltage, taper current, float voltage and temperature coefficient is supported.  
 Monitoring logs voltage and current over time, shows a graph from time to time.  
 
 ENC-120-12 / ENC-180-12 / ENC-240-12 / ENC-360-12  
