@@ -8,6 +8,11 @@ Python 3.6.0 + pip install pyserial as admin
 Windows 7 64 bit
 ENC-120-12
 
+Supported:
+Python 3.4.4 + pip install pyserial==3.0.1
+Windows XP 32 bit
+ENC-120-12
+
 Connect the charger to a PC with a USB to 3V3 TTL bridge. For example
 FTDI TTL-232R-3V3 works fine (yet needs modification to plug into CN31
 of the charger). Or use a module based on Silicon Labs CP210x.
@@ -20,6 +25,7 @@ Pin 4 TX (output) --->--- RX (input)
 
 Version 1.0: Argument checks for ENC-120-12 only.
              No temperature monitoring.
+Version 1.1: Minor change in print to file needed by Python 3.4.4.
 """
 
 import signal
@@ -202,7 +208,7 @@ def log_close():
         m_logfile.close()
 
 def log_print(*args, **kwargs):
-    print(*args, **kwargs, file = m_logfile)
+    print(file = m_logfile, *args, **kwargs)
 
 #---print----------------------------------------------------------------------
 
